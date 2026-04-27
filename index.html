@@ -1,407 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY 5 BEST DISHES HERE IN ILOCOS SUR</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#7F1D1D',   // MAROON
-                        secondary: '#4F0F0F',  // Dark Maroon
-                        accent: '#FEE2E2',     // Light Pink
-                        cream: '#FFF9F5',
-                        dark: '#1F2937',
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
-        body { font-family: 'Poppins', sans-serif; background-color: #FFF9F5; }
-        .titleFont { font-family: 'Playfair Display', serif; }
-        .card-shadow { box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-        .gradient-bg { background: linear-gradient(135deg, #7F1D1D 0%, #4F0F0F 100%); }
-        .ingredient { background: #FEE2E2; border-left: 5px solid #7F1D1D; }
-        .step { background: #FFFFFF; border: 1px solid #FEE2E2; transition: all 0.3s; }
-        .step:hover { transform: translateX(5px); border-color: #7F1D1D; }
-        .origin-badge { background: #FEE2E2; color: #7F1D1D; border: 1px solid #FCA5A5; }
-        .food-image { 
-            width: 100%; 
-            height: 380px; 
-            object-fit: cover; 
-            display: block;
-        }
-        .hero-section { 
-            background: linear-gradient(135deg, #FFF9F5 0%, #FEE2E2 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 80%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(127,29,29,0.05) 0%, rgba(127,29,29,0) 70%);
-            transform: rotate(30deg);
-        }
-        .number-badge {
-            width: 60px;
-            height: 60px;
-            background: #7F1D1D;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 10;
-        }
-    </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MY 5 BEST DISHES HERE IN ILOCOS SUR</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   <script>
+       tailwind.config = {
+           theme: {
+               extend: {
+                   colors: {
+                       primary: '#7F1D1D',   // MAROON
+                       secondary: '#4F0F0F',  // Dark Maroon
+                       accent: '#FEE2E2',     // Light Pink
+                       cream: '#FFF9F5',
+                       dark: '#1F2937',
+                   },
+               }
+           }
+       }
+   </script>
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+       body { font-family: 'Poppins', sans-serif; background-color: #FFF9F5; }
+       .titleFont { font-family: 'Playfair Display', serif; }
+       .card-shadow { box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+       .gradient-bg { background: linear-gradient(135deg, #7F1D1D 0%, #4F0F0F 100%); }
+       .ingredient { background: #FEE2E2; border-left: 5px solid #7F1D1D; }
+       .step { background: #FFFFFF; border: 1px solid #FEE2E2; transition: all 0.3s; }
+       .step:hover { transform: translateX(5px); border-color: #7F1D1D; }
+       .origin-badge { background: #FEE2E2; color: #7F1D1D; border: 1px solid #FCA5A5; }
+       .food-image {
+           width: 100%;
+           height: 380px;
+           object-fit: cover;
+           display: block;
+       }
+       .profile-img {
+           width: 200px;
+           height: 200px;
+           border-radius: 50%;
+           object-fit: cover;
+           border: 8px solid white;
+           box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+       }
+       .hero-section {
+           background: linear-gradient(135deg, #FFF9F5 0%, #FEE2E2 100%);
+           position: relative;
+           overflow: hidden;
+       }
+       .hero-section::before {
+           content: '';
+           position: absolute;
+           top: -50%;
+           right: -20%;
+           width: 80%;
+           height: 200%;
+           background: radial-gradient(circle, rgba(127,29,29,0.05) 0%, rgba(127,29,29,0) 70%);
+           transform: rotate(30deg);
+       }
+       .number-badge {
+           width: 60px;
+           height: 60px;
+           background: #7F1D1D;
+           color: white;
+           border-radius: 50%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-size: 24px;
+           font-weight: bold;
+           position: absolute;
+           top: 20px;
+           left: 20px;
+           z-index: 10;
+       }
+   </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <nav class="gradient-bg text-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold titleFont">🍽️ RICA LLANES Kitchen</div>
-            <div class="flex gap-6 items-center">
-                <a href="#" onclick="showPage('home')" class="cursor-pointer font-medium hover:opacity-80">Home</a>
-                <a href="#" onclick="showPage('dishes')" class="cursor-pointer font-medium hover:opacity-80">Dishes</a>
-                <a href="#" onclick="showPage('contact')" class="cursor-pointer font-medium hover:opacity-80">Contact Us</a>
-            </div>
-        </div>
-    </nav>
+   <!-- NAVIGATION -->
+   <nav class="gradient-bg text-white shadow-lg sticky top-0 z-50">
+       <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+           <div class="text-xl font-bold titleFont">🍽️ RICA LLANES Kitchen</div>
+           <div class="flex gap-6 items-center">
+               <a href="#" onclick="showPage('home')" class="cursor-pointer font-medium hover:opacity-80">Home</a>
+               <a href="#" onclick="showPage('dishes')" class="cursor-pointer font-medium hover:opacity-80">Dishes</a>
+               <a href="#" onclick="showPage('contact')" class="cursor-pointer font-medium hover:opacity-80">Contact Us</a>
+           </div>
+       </div>
+   </nav>
 
-    <!-- HOME PAGE -->
-    <div id="home" class="page-content">
-        <section class="pt-24 pb-28 px-4 hero-section">
-            <div class="container mx-auto max-w-5xl text-center relative z-10">
-                <div class="inline-block p-4 rounded-full bg-white shadow-md mb-8">
-                    <i class="fa fa-cutlery text-5xl text-primary"></i>
-                </div>
-                <h1 class="text-7xl font-bold text-dark mb-6 titleFont leading-tight">
-                    <span class="text-primary">MY 5 BEST</span> <br>
-                    DISHES HERE IN <br>
-                    <span class="text-primary">ILOCOS SUR</span>
-                </h1>
-                <div class="w-40 h-1 gradient-bg mx-auto mb-8 rounded-full"></div>
-                <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-                    ANNEYONG! Welcome to My Kitchen!
-                    Come and join me as I showcase My 5 BEST DISHES HERE IN ILOCOS SUR!
-                    From savory delights to sweet treats, I will guide you with easy step-by-step instruction
-                    so you can cook and experience these mouth-watering flavors at home!
-                    
-                </p>
-                <a href="#" onclick="showPage('dishes')" class="bg-primary hover:bg-secondary text-white px-12 py-5 rounded-full text-xl font-semibold inline-block transition-all transform hover:scale-105 shadow-xl">
-                    <i class="fa fa-book-open mr-2"></i> View Recipes
-                </a>
-            </div>
-        </section>
-        
-        <!-- Features Section -->
-        <section class="py-16 px-4 bg-white">
-            <div class="container mx-auto max-w-5xl">
-                <h2 class="text-3xl font-bold text-center text-dark mb-12 titleFont">Why you'll love it ❤️</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center p-6 rounded-2xl bg-cream">
-                        <i class="fa fa-check-circle text-4xl text-primary mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Easy Steps</h3>
-                        <p class="text-gray-600">Simple instructions that anyone can follow.</p>
-                    </div>
-                    <div class="text-center p-6 rounded-2xl bg-cream">
-                        <i class="fa fa-star text-4xl text-primary mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Authentic Taste</h3>
-                        <p class="text-gray-600">Original and traditional Ilocano recipes.</p>
-                    </div>
-                    <div class="text-center p-6 rounded-2xl bg-cream">
-                        <i class="fa fa-heart text-4xl text-primary mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Made with Love</h3>
-                        <p class="text-gray-600">Food that brings family and friends together.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+   <!-- HOME PAGE -->
+   <div id="home" class="page-content">
+       <section class="pt-24 pb-28 px-4 hero-section">
+           <div class="container mx-auto max-w-5xl text-center relative z-10">
+               
+               <!-- PLACE FOR YOUR PICTURE -->
+               <div class="mb-8">
+                   <img src="image (4).png" alt="Rica" class="profile-img mx-auto">
+               </div>
+               
+               <div class="inline-block p-4 rounded-full bg-white shadow-md mb-8">
+                   <i class="fa fa-cutlery text-5xl text-primary"></i>
+               </div>
+               <h1 class="text-7xl font-bold text-dark mb-6 titleFont leading-tight">
+                   <span class="text-primary">MY 5 BEST</span> <br>
+                   DISHES HERE IN <br>
+                   <span class="text-primary">ILOCOS SUR</span>
+               </h1>
+               <div class="w-40 h-1 gradient-bg mx-auto mb-8 rounded-full"></div>
+               <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                   ANNEYONG! Welcome to My Kitchen!
+                   Come and join me as I showcase My 5 BEST DISHES HERE IN ILOCOS SUR!
+                   From savory delights to sweet treats, I will guide you with easy step-by-step instruction
+                   so you can cook and experience these mouth-watering flavors at home!
+               </p>
+               <a href="#" onclick="showPage('dishes')" class="bg-primary hover:bg-secondary text-white px-12 py-5 rounded-full text-xl font-semibold inline-block transition-all transform hover:scale-105 shadow-xl">
+                   <i class="fa fa-book-open mr-2"></i> View Recipes
+               </a>
+           </div>
+       </section>
+      
+       <!-- Features Section -->
+       <section class="py-16 px-4 bg-white">
+           <div class="container mx-auto max-w-5xl">
+               <h2 class="text-3xl font-bold text-center text-dark mb-12 titleFont">Why you'll love it ❤️</h2>
+               <div class="grid md:grid-cols-3 gap-8">
+                   <div class="text-center p-6 rounded-2xl bg-cream">
+                       <i class="fa fa-check-circle text-4xl text-primary mb-4"></i>
+                       <h3 class="text-xl font-bold mb-2">Easy Steps</h3>
+                       <p class="text-gray-600">Simple instructions that anyone can follow.</p>
+                   </div>
+                   <div class="text-center p-6 rounded-2xl bg-cream">
+                       <i class="fa fa-star text-4xl text-primary mb-4"></i>
+                       <h3 class="text-xl font-bold mb-2">Authentic Taste</h3>
+                       <p class="text-gray-600">Original and traditional Ilocano recipes.</p>
+                   </div>
+                   <div class="text-center p-6 rounded-2xl bg-cream">
+                       <i class="fa fa-heart text-4xl text-primary mb-4"></i>
+                       <h3 class="text-xl font-bold mb-2">Made with Love</h3>
+                       <p class="text-gray-600">Food that brings family and friends together.</p>
+                   </div>
+               </div>
+           </div>
+       </section>
+   </div>
 
-    <!-- DISHES PAGE -->
-    <div id="dishes" class="page-content hidden">
-        <section class="py-16 px-4 bg-cream">
-            <div class="container mx-auto max-w-4xl">
-                <h2 class="text-5xl font-bold text-center text-dark mb-16 titleFont">
-                    <i class="fa fa-book text-primary mr-2"></i> Recipe Collection
-                </h2>
+   <!-- DISHES PAGE -->
+   <div id="dishes" class="page-content hidden">
+       <section class="py-16 px-4 bg-cream">
+           <div class="container mx-auto max-w-4xl">
+               <h2 class="text-5xl font-bold text-center text-dark mb-16 titleFont">
+                   <i class="fa fa-book text-primary mr-2"></i> Recipe Collection
+               </h2>
 
-                <!-- DISH 1: EMPANADA -->
-                <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
-                    <div class="number-badge">01</div>
-                    <img src="image (3).png" alt="Empanada" class="food-image">
-                    <div class="p-10">
-                        <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
-                            <i class="fa fa-map-marker mr-1"></i> ORIGIN: VIGAN CITY & SANTA
-                        </span>
-                        <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Ilocos Empanada</h3>
-                        <p class="text-gray-500 mb-8 text-lg">The iconic orange crispy crust filled with savory ingredients! A must-try street food.</p>
+               <!-- DISH 1: EMPANADA -->
+               <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
+                   <div class="number-badge">01</div>
+                   <img src="image (3).png" alt="Empanada" class="food-image">
+                   <div class="p-10">
+                       <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
+                           <i class="fa fa-map-marker mr-1"></i> ORIGIN: VIGAN CITY & SANTA
+                       </span>
+                       <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Ilocos Empanada</h3>
+                       <p class="text-gray-500 mb-8 text-lg">The iconic orange crispy crust filled with savory ingredients! A must-try street food.</p>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
-                        <div class="ingredient p-6 rounded-xl mb-8">
-                            <ul class="space-y-3">
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> 2 cups Rice flour & 1 cup All-purpose flour</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> 1 cup Annatto water (for orange color)</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Grated green papaya or bean sprouts</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Longganisa or ground pork</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Hard-boiled eggs (sliced)</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Oil for frying</li>
-                            </ul>
-                        </div>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
+                       <div class="ingredient p-6 rounded-xl mb-8">
+                           <ul class="space-y-3">
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> 2 cups Rice flour & 1 cup All-purpose flour</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> 1 cup Annatto water (for orange color)</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Grated green papaya or bean sprouts</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Longganisa or ground pork</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Hard-boiled eggs (sliced)</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Oil for frying</li>
+                           </ul>
+                       </div>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Cook</h4>
-                        <div class="space-y-4">
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 1: Make the Dough</p>
-                                <p class="text-gray-600">Mix the flours and add annatto water gradually. Mix until it becomes a smooth, orange dough. Set aside.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 2: Prepare Filling</p>
-                                <p class="text-gray-600">Sauté the papaya/sprouts and meat separately with garlic, onion, and fish sauce until cooked.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 3: Mold & Fry</p>
-                                <p class="text-gray-600">Flatten a portion of dough into a thin circle. Put fillings and egg in the center. Fold and seal edges. Deep fry until golden brown and crispy!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Cook</h4>
+                       <div class="space-y-4">
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 1: Make the Dough</p>
+                               <p class="text-gray-600">Mix the flours and add annatto water gradually. Mix until it becomes a smooth, orange dough. Set aside.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 2: Prepare Filling</p>
+                               <p class="text-gray-600">Sauté the papaya/sprouts and meat separately with garlic, onion, and fish sauce until cooked.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 3: Mold & Fry</p>
+                               <p class="text-gray-600">Flatten a portion of dough into a thin circle. Put fillings and egg in the center. Fold and seal edges. Deep fry until golden brown and crispy!</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
 
-                <!-- DISH 2: BAGNET -->
-                <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
-                    <div class="number-badge">02</div>
-                    <img src="image (1).png" alt="Bagnet" class="food-image">
-                    <div class="p-10">
-                        <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
-                            <i class="fa fa-map-marker mr-1"></i> ORIGIN: LAPOG & CANDON
-                        </span>
-                        <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Crispy Bagnet</h3>
-                        <p class="text-gray-500 mb-8 text-lg">The ultimate pork delicacy! Super crispy skin and tender meat inside.</p>
+               <!-- DISH 2: BAGNET -->
+               <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
+                   <div class="number-badge">02</div>
+                   <img src="image (1).png" alt="Bagnet" class="food-image">
+                   <div class="p-10">
+                       <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
+                           <i class="fa fa-map-marker mr-1"></i> ORIGIN: LAPOG & CANDON
+                       </span>
+                       <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Crispy Bagnet</h3>
+                       <p class="text-gray-500 mb-8 text-lg">The ultimate pork delicacy! Super crispy skin and tender meat inside.</p>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
-                        <div class="ingredient p-6 rounded-xl mb-8">
-                            <ul class="space-y-3">
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> 1 kg Pork Belly (Liempo)</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Water, Salt, Pepper, Garlic</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Vinegar</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Lots of Oil for deep frying</li>
-                            </ul>
-                        </div>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
+                       <div class="ingredient p-6 rounded-xl mb-8">
+                           <ul class="space-y-3">
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> 1 kg Pork Belly (Liempo)</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Water, Salt, Pepper, Garlic</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Vinegar</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Lots of Oil for deep frying</li>
+                           </ul>
+                       </div>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Cook</h4>
-                        <div class="space-y-4">
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 1: Boil</p>
-                                <p class="text-gray-600">Boil the pork belly with salt, pepper, and garlic until tender. Drain and let it dry completely.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 2: Prick & Air Dry</p>
-                                <p class="text-gray-600">Prick the skin with a fork. Rub with vinegar and salt. Air dry or put in front of electric fan for hours.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 3: Deep Fry</p>
-                                <p class="text-gray-600">Fry in very hot oil. Low heat then high heat method. Fry until super crispy and bubbly. Slice and serve with bagoong!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- DISH 3: PINAKBET -->
-                <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
-                    <div class="number-badge">03</div>
-                    <img src="image.png" alt="Pinakbet" class="food-image">
-                    <div class="p-10">
-                        <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
-                            <i class="fa fa-map-marker mr-1"></i> ORIGIN: THROUGHOUT ILOCOS SUR
-                        </span>
-                        <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Pinakbet</h3>
-                        <p class="text-gray-500 mb-8 text-lg">Healthy mixed vegetables stewed in shrimp paste.</p>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Cook</h4>
+                       <div class="space-y-4">
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 1: Boil</p>
+                               <p class="text-gray-600">Boil the pork belly with salt, pepper, and garlic until tender. Drain and let it dry completely.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 2: Prick & Air Dry</p>
+                               <p class="text-gray-600">Prick the skin with a fork. Rub with vinegar and salt. Air dry or put in front of electric fan for hours.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 3: Deep Fry</p>
+                               <p class="text-gray-600">Fry in very hot oil. Low heat then high heat method. Fry until super crispy and bubbly. Slice and serve with bagoong!</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+              
+               <!-- DISH 3: PINAKBET -->
+               <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
+                   <div class="number-badge">03</div>
+                   <img src="image.png" alt="Pinakbet" class="food-image">
+                   <div class="p-10">
+                       <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
+                           <i class="fa fa-map-marker mr-1"></i> ORIGIN: THROUGHOUT ILOCOS SUR
+                       </span>
+                       <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Pinakbet</h3>
+                       <p class="text-gray-500 mb-8 text-lg">Healthy mixed vegetables stewed in shrimp paste.</p>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
-                        <div class="ingredient p-6 rounded-xl mb-8">
-                            <ul class="space-y-3">
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Squash, Ampalaya, Okra, Eggplant, Beans</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Pork belly or shrimp</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Onion, Garlic, Tomatoes</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Bagoong Alamang (Shrimp paste)</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Water</li>
-                        </div>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
+                       <div class="ingredient p-6 rounded-xl mb-8">
+                           <ul class="space-y-3">
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Squash, Ampalaya, Okra, Eggplant, Beans</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Pork belly or shrimp</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Onion, Garlic, Tomatoes</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Bagoong Alamang (Shrimp paste)</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Water</li>
+                           </ul>
+                       </div>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Cook</h4>
-                        <div class="space-y-4">
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 1: Sauté</p>
-                                <p class="text-gray-600">Heat oil. Sauté garlic, onion, and tomatoes. Add the pork and cook until light brown.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 2: Season</p>
-                                <p class="text-gray-600">Add the bagoong alamang. Pour water and let it simmer for a few minutes.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 3: Add Vegetables</p>
-                                <p class="text-gray-600">Add the squash first, then the other vegetables. Do not over stir. Cover and cook until tender but not mushy.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Cook</h4>
+                       <div class="space-y-4">
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 1: Sauté</p>
+                               <p class="text-gray-600">Heat oil. Sauté garlic, onion, and tomatoes. Add the pork and cook until light brown.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 2: Season</p>
+                               <p class="text-gray-600">Add the bagoong alamang. Pour water and let it simmer for a few minutes.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 3: Add Vegetables</p>
+                               <p class="text-gray-600">Add the squash first, then the other vegetables. Do not over stir. Cover and cook until tender but not mushy.</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
 
-                <!-- DISH 4: LONGGANISA -->
-                <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
-                    <div class="number-badge">04</div>
-                    <img src="image (1).png" alt="Longganisa" class="food-image">
-                    <div class="p-10">
-                        <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
-                            <i class="fa fa-map-marker mr-1"></i> ORIGIN: VIGAN CITY
-                        </span>
-                        <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Vigan Longganisa</h3>
-                        <p class="text-gray-500 mb-8 text-lg">Garlicky and savory sausage known for its distinct taste.</p>
+               <!-- DISH 4: LONGGANISA -->
+               <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
+                   <div class="number-badge">04</div>
+                   <img src="image (2).png" alt="Longganisa" class="food-image">
+                   <div class="p-10">
+                       <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
+                           <i class="fa fa-map-marker mr-1"></i> ORIGIN: VIGAN CITY
+                       </span>
+                       <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Vigan Longganisa</h3>
+                       <p class="text-gray-500 mb-8 text-lg">Garlicky and savory sausage known for its distinct taste.</p>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
-                        <div class="ingredient p-6 rounded-xl mb-8">
-                            <ul class="space-y-3">
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Ground Pork</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Lots of minced Garlic</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Soy sauce, Vinegar, Salt, Sugar, Black Pepper</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Annatto powder (optional for color)</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Sausage casing</li>
-                            </ul>
-                        </div>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
+                       <div class="ingredient p-6 rounded-xl mb-8">
+                           <ul class="space-y-3">
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Ground Pork</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Lots of minced Garlic</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Soy sauce, Vinegar, Salt, Sugar, Black Pepper</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Annatto powder (optional for color)</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Sausage casing</li>
+                           </ul>
+                       </div>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Make</h4>
-                        <div class="space-y-4">
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 1: Mix</p>
-                                <p class="text-gray-600">Combine all ingredients in a bowl. Mix thoroughly until well blended.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 2: Stuff</p>
-                                <p class="text-gray-600">Place the mixture into the sausage casing using a funnel or sausage stuffer.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 3: Cook</p>
-                                <p class="text-gray-600">Pan-fry with a little water until water dries up, then add oil and fry until golden brown.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- DISH 5: HALO-HALO -->
-                <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
-                    <div class="number-badge">05</div>
-                    <img src="image (6).png" alt="Halo-Halo" class="food-image">
-                    <div class="p-10">
-                        <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
-                            <i class="fa fa-map-marker mr-1"></i> ORIGIN: POPULAR DESSERT EVERYWHERE
-                        </span>
-                        <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Halo-Halo</h3>
-                        <p class="text-gray-500 mb-8 text-lg">The ultimate Filipino cold dessert! A perfect mixture of sweet ingredients, ice, and milk.</p>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Make</h4>
+                       <div class="space-y-4">
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 1: Mix</p>
+                               <p class="text-gray-600">Combine all ingredients in a bowl. Mix thoroughly until well blended.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 2: Stuff</p>
+                               <p class="text-gray-600">Place the mixture into the sausage casing using a funnel or sausage stuffer.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 3: Cook</p>
+                               <p class="text-gray-600">Pan-fry with a little water until water dries up, then add oil and fry until golden brown.</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+              
+               <!-- DISH 5: HALO-HALO -->
+               <div class="bg-white rounded-3xl card-shadow mb-20 overflow-hidden relative">
+                   <div class="number-badge">05</div>
+                   <img src="image (6).png" alt="Halo-Halo" class="food-image">
+                   <div class="p-10">
+                       <span class="inline-block origin-badge px-4 py-2 rounded-full text-sm font-bold mb-4">
+                           <i class="fa fa-map-marker mr-1"></i> ORIGIN: POPULAR DESSERT EVERYWHERE
+                       </span>
+                       <h3 class="text-4xl font-bold text-primary mb-4 titleFont">Halo-Halo</h3>
+                       <p class="text-gray-500 mb-8 text-lg">The ultimate Filipino cold dessert! A perfect mixture of sweet ingredients, ice, and milk.</p>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
-                        <div class="ingredient p-6 rounded-xl mb-8">
-                            <ul class="space-y-3">
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Finely crushed ice</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Evaporated milk or Condensed milk</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Sweetened beans, sago, gulaman, nata de coco</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Sweetened banana, jackfruit, macapuno</li>
-                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Ube halaya, Leche flan, Ice cream</li>
-                            </ul>
-                        </div>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-list-ul mr-2"></i> Ingredients</h4>
+                       <div class="ingredient p-6 rounded-xl mb-8">
+                           <ul class="space-y-3">
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Finely crushed ice</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Evaporated milk or Condensed milk</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Sweetened beans, sago, gulaman, nata de coco</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Sweetened banana, jackfruit, macapuno</li>
+                               <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i> Ube halaya, Leche flan, Ice cream</li>
+                           </ul>
+                       </div>
 
-                        <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Make</h4>
-                        <div class="space-y-4">
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 1: Layer</p>
-                                <p class="text-gray-600">Put the sweet ingredients (beans, jellies, fruits) at the bottom of a tall glass.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 2: Add Ice</p>
-                                <p class="text-gray-600">Fill the glass to the top with finely crushed ice. Press it down gently.</p>
-                            </div>
-                            <div class="step p-5 rounded-xl">
-                                <p class="font-bold text-lg text-primary">Step 3: Top & Mix</p>
-                                <p class="text-gray-600">Add the leche flan, ube halaya, and ice cream on top. Pour milk. Then... HALO-HALO! Mix everything and enjoy! 😋</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                       <h4 class="text-2xl font-semibold text-secondary mb-4"><i class="fa fa-fire mr-2"></i> Steps to Make</h4>
+                       <div class="space-y-4">
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 1: Layer</p>
+                               <p class="text-gray-600">Put the sweet ingredients (beans, jellies, fruits) at the bottom of a tall glass.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 2: Add Ice</p>
+                               <p class="text-gray-600">Fill the glass to the top with finely crushed ice. Press it down gently.</p>
+                           </div>
+                           <div class="step p-5 rounded-xl">
+                               <p class="font-bold text-lg text-primary">Step 3: Top & Mix</p>
+                               <p class="text-gray-600">Add the leche flan, ube halaya, and ice cream on top. Pour milk. Then... HALO-HALO! Mix everything and enjoy! 😋</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
 
-            </div>
-        </section>
-    </div>
+           </div>
+       </section>
+   </div>
 
-    <!-- CONTACT US PAGE - WORKING -->
-    <div id="contact" class="page-content hidden">
-        <section class="pt-16 pb-20 px-4 bg-cream">
-            <div class="container mx-auto max-w-3xl text-center">
-                <h1 class="text-5xl font-bold text-dark mb-6 titleFont">Get in Touch 📞</h1>
-                <p class="text-xl text-gray-600 mb-10">
-                    Do you have questions? Or want to request more recipes? Message me! I would love to hear from you.
-                </p>
+   <!-- CONTACT US PAGE - WITH PICTURE -->
+   <div id="contact" class="page-content hidden">
+       <section class="pt-16 pb-20 px-4 bg-cream">
+           <div class="container mx-auto max-w-3xl text-center">
+               
+               <!-- PLACE FOR YOUR PICTURE -->
+               <div class="mb-8">
+                   <img src="image (4).png" alt="Rica" class="profile-img mx-auto">
+               </div>
+               
+               <h1 class="text-5xl font-bold text-dark mb-6 titleFont">Get in Touch 📞</h1>
+               <p class="text-xl text-gray-600 mb-10">
+                   Do you have questions? Or want to request more recipes? Message me! I would love to hear from you.
+               </p>
 
-                <form action="https://formsubmit.co/llanesrica11@gmail.com" method="POST" class="bg-white p-10 rounded-3xl card-shadow">
-                    <div class="space-y-6 text-left">
-                        <div>
-                            <label class="block text-gray-700 font-bold mb-2">Your Name</label>
-                            <input type="text" name="name" placeholder="Enter your name" required class="w-full p-3 border rounded-xl focus:outline-none focus:border-primary">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-bold mb-2">Email Address</label>
-                            <input type="email" name="email" placeholder="your@email.com" required class="w-full p-3 border rounded-xl focus:outline-none focus:border-primary">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-bold mb-2">Message</label>
-                            <textarea name="message" rows="5" placeholder="Type your message here..." required class="w-full p-3 border rounded-xl focus:outline-none focus:border-primary"></textarea>
-                        </div>
-                        <input type="hidden" name="_captcha" value="false">
-                        <button type="submit" class="gradient-bg text-white px-8 py-3 rounded-full font-bold w-full hover:opacity-90 transition">
-                            <i class="fa fa-paper-plane mr-2"></i> Send Message
-                        </button>
-                    </div>
-                </form>
+               <form action="https://formsubmit.co/llanesrica11@gmail.com" method="POST" class="bg-white p-10 rounded-3xl card-shadow">
+                   <div class="space-y-6 text-left">
+                       <div>
+                           <label class="block text-gray-700 font-bold mb-2">Your Name</label>
+                           <input type="text" name="name" placeholder="Enter your name" required class="w-full p-3 border rounded-xl focus:outline-none focus:border-primary">
+                       </div>
+                       <div>
+                           <label class="block text-gray-700 font-bold mb-2">Email Address</label>
+                           <input type="email" name="email" placeholder="your@email.com" required class="w-full p-3 border rounded-xl focus:outline-none focus:border-primary">
+                       </div>
+                       <div>
+                           <label class="block text-gray-700 font-bold mb-2">Message</label>
+                           <textarea name="message" rows="5" placeholder="Type your message here..." required class="w-full p-3 border rounded-xl focus:outline-none focus:border-primary"></textarea>
+                       </div>
+                       <input type="hidden" name="_captcha" value="false">
+                       <button type="submit" class="gradient-bg text-white px-8 py-3 rounded-full font-bold w-full hover:opacity-90 transition">
+                           <i class="fa fa-paper-plane mr-2"></i> Send Message
+                       </button>
+                   </div>
+               </form>
 
-            </div>
-        </section>
-    </div>
+           </div>
+       </section>
+   </div>
 
-    
-    <footer class="gradient-bg text-white text-center py-8">
-        <p class="text-2xl font-bold titleFont">Made by RICA LLANES</p>
-        <p class="text-sm opacity-80 mt-2">Copyright © 2026 | All Rights Reserved</p>
-    </footer>
+  
+   <footer class="gradient-bg text-white text-center py-8">
+       <p class="text-2xl font-bold titleFont">Made by RICA LLANES</p>
+       <p class="text-sm opacity-80 mt-2">Copyright © 2026 | All Rights Reserved</p>
+   </footer>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page-content').forEach(page => {
-                page.classList.add('hidden');
-            });
-            // Show the selected page
-            document.getElementById(pageId).classList.remove('hidden');
-        }
+   <!-- JAVASCRIPT -->
+   <script>
+       function showPage(pageId) {
+           // Hide all pages
+           document.querySelectorAll('.page-content').forEach(page => {
+               page.classList.add('hidden');
+           });
+           // Show the selected page
+           document.getElementById(pageId).classList.remove('hidden');
+       }
 
-        // Default: Show Home page when loaded
-        window.onload = function() {
-            showPage('home');
-        }
-    </script>
+       // Default: Show Home page when loaded
+       window.onload = function() {
+           showPage('home');
+       }
+   </script>
 
 </body>
 </html>
